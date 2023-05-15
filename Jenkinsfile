@@ -9,8 +9,12 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "rm -rf /var/www/jenkins-simple-nuxt"
-                sh "cp -r ${WORKSPACE}/build/ /var/www/jenkins-simple-nuxt/"
+                shsteps {
+                sh "sudo rm -rf /var/www/jenkins-simple-nuxt"
+                sh "sudo mkdir -p /var/www/jenkins-simple-nuxt"
+                sh "sudo cp -r ${WORKSPACE}/dist /var/www/jenkins-simple-nuxt/"
+                sh "sudo chown -R www-data:www-data /var/www/jenkins-simple-nuxt"
+                sh "sudo chmod -R 755 /var/www/jenkins-simple-nuxt"
             }
         }
     }
