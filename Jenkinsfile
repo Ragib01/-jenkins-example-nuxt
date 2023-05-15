@@ -3,14 +3,14 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "sudo npm install"
-                sh "sudo npm run build"
+                sh "npm install"
+                sh "npm run build"
             }
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -rf /var/www/jenkins-simple-nuxt"
-                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-simple-nuxt/"
+                sh "rm -rf /var/www/jenkins-simple-nuxt"
+                sh "cp -r ${WORKSPACE}/build/ /var/www/jenkins-simple-nuxt/"
             }
         }
     }
