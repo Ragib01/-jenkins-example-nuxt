@@ -9,7 +9,6 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                shsteps {
                 sh "sudo rm -rf /var/www/jenkins-simple-nuxt"
                 sh "sudo mkdir -p /var/www/jenkins-simple-nuxt"
                 sh "sudo cp -r ${WORKSPACE}/dist /var/www/jenkins-simple-nuxt/"
