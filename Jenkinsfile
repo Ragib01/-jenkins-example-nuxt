@@ -1,5 +1,8 @@
 pipeline {
      agent any
+     tools {
+     	nodejs 'mp-16.2.0'
+     }
      environment {
         DEPLOY_DIR = '/var/www/jenkins-simple-nuxt'
      }
