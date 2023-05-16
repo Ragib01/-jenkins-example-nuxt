@@ -15,10 +15,10 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -rf ${DEPLOY_DIR}/*"
-                sh "sudo cp -r ${WORKSPACE}/dist/* ${DEPLOY_DIR}/"
-                sh "sudo chown -R www-data:www-data ${DEPLOY_DIR}"
-                sh "sudo chmod -R 755 ${DEPLOY_DIR}"
+                sh "rm -rf ${DEPLOY_DIR}/*"
+                sh "cp -r ${WORKSPACE}/dist/* ${DEPLOY_DIR}/"
+                sh "chown -R www-data:www-data ${DEPLOY_DIR}"
+                sh "chmod -R 755 ${DEPLOY_DIR}"
             }
         }
     }
