@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node_modules/.bin/nuxt",
-    "build": "node_modules/.bin/nuxt build",
-    "start": "node_modules/.bin/nuxt start",
-     "generate": "node_modules/.bin/nuxt generate"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "dependencies": {
     "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
+    "nuxt": "^2.16.3",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
-  },
-  "devDependencies": {}
+  }
 }
